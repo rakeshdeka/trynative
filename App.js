@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, ScrollView } from 'react-native';
+import Card from './Card'; // Assuming Card component is in the same directory
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <Card
+        title="Sample Card"
+        imageUrl="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NxN3gyN20wbjlkcG85NHdzZWJ3aXh1d3ZyaDJrYWx4OHFvMjNyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/R6gvnAxj2ISzJdbA63/giphy-downsized-large.gif"
+        description="This is a sample card in React Native."
+      />
+      <Card
+        title="Sample Card"
+        imageUrl="https://media.giphy.com/media/ifXQlYd1bxlGjLHPKu/giphy.gif"
+        description="This is a sample card in React Native."
+      />
+      <Card
+        title="Sample Card"
+        imageUrl="https://media.giphy.com/media/KHKJGDrMLywqsf4wCv/giphy.gif"
+        description="This is a sample card in React Native."
+      />
+      {/* Add more Card components with different data as needed */}
+    </ScrollView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
